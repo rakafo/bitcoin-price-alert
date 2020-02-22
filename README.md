@@ -20,9 +20,8 @@ Overall commands:
 4. `/ end {want|position} - end jobs in your selected category")`
 
 ## Installation
-`pip install python-telegram-bot requests`
-
-credentials file format:
+1. `pip install python-telegram-bot requests`
+2. create a file "credentials" with the following structure:
 {
   "token": "XX"
 }

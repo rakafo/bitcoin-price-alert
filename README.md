@@ -6,8 +6,8 @@ Capabilities:
 
 
 ## Usage
-* get an alert when price exceeds 10000 - `/want long 10000`
-* get an alert when price falls short of 10000 - `/want short 10000`
+* get an alert when price gets above 10000 - `/want long 10000`
+* get an alert when price gets below 10000 - `/want short 10000`
 * get price-movement notifiers based on currently held position - `/position long 10000 sl 9800`
   - will alert on every 35 price change step (price flapping ommited);
   - will alert when target price reached - implicilty set to +70
@@ -16,8 +16,8 @@ Capabilities:
 Overall commands:
 1. `/want {long|short} <price:int>`
 2. `/position (long|short) <price:int> sl <stop loss price:int>`
-3. `/jobs`
-4. `/ end {want|position} - end jobs in your selected category")`
+3. `/jobs` - show all jobs
+4. `/end {want|position}` - end jobs in your selected category
 
 ## Installation
 as sudo or root

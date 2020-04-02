@@ -20,8 +20,11 @@ Overall commands:
 4. `/ end {want|position} - end jobs in your selected category")`
 
 ## Installation
-1. `pip install python-telegram-bot requests`
-2. create a file "credentials" with the following structure:
-{
-  "token": "XX"
-}
+as sudo or root
+1. `python3 -m venv /opt/venv && cd /opt/venv/bin/activate`
+2. `pip install -r requirements.txt`
+3. `mkdir /opt/telegram-alerts && cd $_`
+4. `echo '{ "token": "<your-token>" }' > credentials`
+5. `mv telegram-alerts.service /etc/systemd/system/telegram-alerts.service`
+6. `systemctl daemon-reload`
+7. `systemctl enable --now telegram-alerts.service`

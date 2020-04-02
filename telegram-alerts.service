@@ -1,0 +1,8 @@
+[Unit]
+Description=Telegram alert script
+
+[Service]
+ExecStart=/usr/local/bin/telegram-alerts.py
+
+[Install]
+WantedBy=multi-user.target

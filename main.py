@@ -1,4 +1,4 @@
-#!/usr/local/venv/bin/python3
+#!/opt/venv/bin/python3
 
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
@@ -203,7 +203,7 @@ def unknown(update, context):
 
 def main():
     #  fetch telegram messages
-    cred_file = json.loads(open('credentials', 'r').read())
+    cred_file = json.loads(open('/opt/telegram-alerts/credentials', 'r').read())
     updater = Updater(cred_file['token'], use_context=True)
 
     #  pass telegram messages to handlers

@@ -117,9 +117,10 @@ def want(update, context):
     logger.info(f'New command: {update.message.text}')
     single_reply = []
     job_name = update.message.text
+    job_name1 = ' '.join(job_name.split()[0:2])
     # check and remove if any old job for same want exists
     for i in context.job_queue.jobs():
-        if bool(re.search(job_name.split()[1], i.name)):
+        if bool(re.search(job_name1, i.name)):
             i.schedule_removal()
             single_reply.append(f'Removed old alert: {i.name}')
 
